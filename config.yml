@@ -42,8 +42,10 @@ homebrew_cask_apps:
   - docker
   - google-chrome
   - insomnia
+  - iterm2
   - karabiner-elements
   - little-snitch
+  - nvalt
   - signal
   - skitch
   - slack
