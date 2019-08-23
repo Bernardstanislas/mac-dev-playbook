@@ -25,19 +25,34 @@ homebrew_installed_packages:
   - nvm
   - php
   - cowsay
-  - readline
   - openssl
+  - redis
+  - heroku
+  - tldr
   - wget
+  - autojump
+  - thefuck
+  - postgresql
+  - pipenv
+  - elasticsearch
 
 homebrew_cask_apps:
   - 1password
+  - alfred
   - docker
   - google-chrome
+  - insomnia
   - karabiner-elements
+  - little-snitch
   - signal
   - skitch
   - slack
   - spectacle
+  - spotify
+  - steam
+  - tigervpn
+  - transmission
+  - whatsapp
 
 # Post-provision tasks
 post_provision_tasks:
