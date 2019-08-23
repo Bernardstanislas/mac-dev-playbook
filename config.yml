@@ -14,27 +14,28 @@ dotfiles_files:
 
 # Homebrew
 homebrew_installed_packages:
-  - tmux
+  - autojump
+  - cowsay
+  - elasticsearch
   - git
   - gpg
+  - heroku
   - libevent
-  - sqlite
   - mcrypt
   - nmap
   - node
   - nvm
+  - pipenv
   - php
-  - cowsay
+  - postgresql
   - openssl
   - redis
-  - heroku
-  - tldr
-  - wget
-  - autojump
+  - sqlite
   - thefuck
-  - postgresql
-  - pipenv
-  - elasticsearch
+  - tldr
+  - tmux
+  - unrar
+  - wget
 
 homebrew_cask_apps:
   - 1password
@@ -45,7 +46,9 @@ homebrew_cask_apps:
   - iterm2
   - karabiner-elements
   - little-snitch
+  - notion
   - nvalt
+  - prusaslicer
   - signal
   - skitch
   - slack
