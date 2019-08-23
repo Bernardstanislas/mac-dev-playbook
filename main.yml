@@ -42,3 +42,5 @@
       loop_control:
         loop_var: outer_item
       with_fileglob: "{{ post_provision_tasks|default(omit) }}"
+      tags:
+        - post-install

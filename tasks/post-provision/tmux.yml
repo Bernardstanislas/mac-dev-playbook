@@ -1,0 +1,12 @@
+# Symlink base tmux config
+- name: Link base config
+  file:
+    src: ~/.tmux/.tmux.conf
+    dest: ~/.tmux.conf
+    state: link
+
+# Clone resurrect plugin
+- name: Clone the resurrect plugin
+  git:
+    repo: 'https://github.com/tmux-plugins/tmux-resurrect.git'
+    dest: ~/.tmux/plugins/tmux-resurrect

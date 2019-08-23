@@ -1,0 +1,45 @@
+# Global config
+
+configure_terminal: no
+
+# Dotfiles config
+dotfiles_repo: "https://github.com/bernardstanislas/dotfiles.git"
+dotfiles_repo_version: master
+
+dotfiles_repo_local_destination: "~/Documents/dotfiles"
+dotfiles_files:
+  - .gitignore
+  - .osx
+  - .zshrc
+
+# Homebrew
+homebrew_installed_packages:
+  - tmux
+  - git
+  - gpg
+  - libevent
+  - sqlite
+  - mcrypt
+  - nmap
+  - node
+  - nvm
+  - php
+  - cowsay
+  - readline
+  - openssl
+  - wget
+
+homebrew_cask_apps:
+  - 1password
+  - docker
+  - google-chrome
+  - signal
+  - skitch
+  - slack
+  - spectacle
+
+# Post-provision tasks
+post_provision_tasks:
+  - tasks/post-provision/tmux.yml
+  - tasks/post-provision/oh-my-zsh.yml
+  - tasks/post-provision/spectacle.yml

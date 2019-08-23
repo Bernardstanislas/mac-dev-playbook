@@ -1,0 +1,5 @@
+# Copy shortcuts configuration
+- name: Copy Shortcuts.json
+  copy:
+    src: files/spectacle/Shortcuts.json
+    dest: ~/Library/Application Support/Spectacle/Shortcuts.json
