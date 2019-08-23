@@ -1,0 +1,5 @@
+# Copy configuration
+- name: Copy configuration
+  copy:
+    src: files/iterm2/com.googlecode.iterm2.plist
+    dest: ~/Library/Preferences/com.googlecode.iterm2.plist
