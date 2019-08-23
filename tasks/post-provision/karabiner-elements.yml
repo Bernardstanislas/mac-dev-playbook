@@ -1,0 +1,10 @@
+# Copy configuration files
+- name: Copy complex modifications files
+  copy:
+    src: files/karabiner-elements/1531749633.json
+    dest: ~/.config/karabiner/assets/complex_modifications/1531749633.json
+
+- name: Copy main configuration file
+  copy:
+    src: files/karabiner-elements/karabiner.json
+    dest: ~/.config/karabiner/karabiner.json

@@ -33,6 +33,7 @@ homebrew_cask_apps:
   - 1password
   - docker
   - google-chrome
+  - karabiner-elements
   - signal
   - skitch
   - slack
@@ -40,6 +41,7 @@ homebrew_cask_apps:
 
 # Post-provision tasks
 post_provision_tasks:
-  - tasks/post-provision/tmux.yml
+  - tasks/post-provision/karabiner-elements.yml
   - tasks/post-provision/oh-my-zsh.yml
   - tasks/post-provision/spectacle.yml
+  - tasks/post-provision/tmux.yml
