@@ -2,22 +2,32 @@
 
 configure_terminal: no
 
+osx_script: "~/.osx --no-restart"
+
 # Dotfiles config
 dotfiles_repo: "https://github.com/bernardstanislas/dotfiles.git"
 dotfiles_repo_version: master
 
 dotfiles_repo_local_destination: "~/Documents/dotfiles"
 dotfiles_files:
-  - .gitignore
+  - .gitconfig
   - .osx
   - .zshrc
+  - .tmux.conf.local
 
 # Homebrew
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/cask-versions
+
 homebrew_installed_packages:
   - autojump
   - cowsay
+  - dockutil
   - elasticsearch
+  - fff
   - git
+  - gopass
   - gpg
   - heroku
   - libevent
@@ -25,10 +35,12 @@ homebrew_installed_packages:
   - nmap
   - node
   - nvm
+  - openssl
   - pipenv
   - php
   - postgresql
-  - openssl
+  - pyenv
+  - p7zip
   - redis
   - sqlite
   - thefuck
@@ -41,23 +53,31 @@ homebrew_cask_apps:
   - 1password
   - alfred
   - docker
+  - franz
   - google-chrome
   - insomnia
   - iterm2
   - karabiner-elements
   - little-snitch
+  - micro-snitch
   - notion
   - nvalt
   - prusaslicer
   - signal
   - skitch
   - slack
+  - sonic-pi
   - spectacle
   - spotify
   - steam
   - tigervpn
   - transmission
+  - visual-studio-code
   - whatsapp
+
+# Composer packages
+composer_packages:
+  - name: laravel/valet
 
 # Post-provision tasks
 post_provision_tasks:
@@ -65,3 +85,24 @@ post_provision_tasks:
   - tasks/post-provision/oh-my-zsh.yml
   - tasks/post-provision/spectacle.yml
   - tasks/post-provision/tmux.yml
+  - tasks/post-provision/iterm2.yml
+  - tasks/post-provision/dock-items.yml
+
+# Remove dock items
+dockitems_to_remove:
+  - Launchpad
+  - Mail
+  - Safari
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+  - Calendar
+  - Siri
