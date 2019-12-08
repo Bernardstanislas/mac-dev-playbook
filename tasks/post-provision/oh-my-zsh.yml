@@ -6,6 +6,7 @@
 
 - name: Execute the zsh-installer.sh
   shell: /tmp/zsh-installer.sh
+  become: yes
 
 - name: Remove the zsh-installer.sh
   file:

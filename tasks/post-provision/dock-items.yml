@@ -15,6 +15,7 @@
 - name: List items to persist
   set_fact:
     y: '{{ dockitems_to_persist|map(attribute="name")|list }}'
+- name: Remove present items
   set_fact:
     x: '{{ y | difference(dockitems.stdout_lines) }}'
 - name: Add Dock items
