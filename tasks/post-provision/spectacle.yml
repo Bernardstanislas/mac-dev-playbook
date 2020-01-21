@@ -1,9 +1,0 @@
-# Copy shortcuts configuration
-- name: Make sure target directory exists
-  file:
-    path: ~/Library/Application Support/Spectacle/
-    state: directory
-- name: Copy Shortcuts.json
-  copy:
-    src: files/spectacle/Shortcuts.json
-    dest: ~/Library/Application Support/Spectacle/Shortcuts.json

@@ -1,3 +1,27 @@
 ---
-- name: Install fish pure theme
-  command: fish -c "omf install pure && ln -s $OMF_PATH/themes/pure/conf.d/pure.fish ~/.config/fish/conf.d/pure.fish && ln -s $OMF_PATH/themes/pure/conf.d/_pure_init.fish ~/.config/fish/conf.d/pure_init.fish"
+- name: Make the fisherman directory
+  file:
+    path: /Users/stan/.config/fish/functions
+    state: directory
+    owner: stan
+    mode: 0755
+    recurse: yes
+
+- name: install fisherman
+  become: yes
+  become_user: stan
+  get_url:
+    url: https://git.io/fisherman
+    dest: /Users/stan/.config/fish/functions/fisher.fish
+
+- name: install plugins
+  become: yes
+  become_user: stan
+  shell: fisher add edc/bass paths jethrokuan/z
+  args:
+    executable: /usr/local/bin/fish
+
+- name: change the shell to fish
+  user:
+    name: stan
+    shell: /usr/local/bin/fish
