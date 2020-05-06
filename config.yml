@@ -19,6 +19,7 @@ homebrew_taps:
 
 homebrew_installed_packages:
   - bat
+  - bfg
   - composer
   - cowsay
   - dockutil
